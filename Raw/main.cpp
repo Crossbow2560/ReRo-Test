@@ -2,9 +2,14 @@
 #include <Wire.h>
 #include <DFRobot_VL6180X.h>
 
+#define mySDA 21
+#define mySCL 9;
+
 #define N 2
 int cePins[N] = {2,3};
 uint8_t addrs[N] = {0x30,0x31};
+
+TwoWire myWire = TwoWire(0);
 
 DFRobot_VL6180X tof[N]; 
 
@@ -20,7 +25,7 @@ void init_TOF(int i){
 
 void setup(){
   Serial.begin(115200);
-  Wire.begin();
+  myWire.begin(mySDA, mySCL);
 
   for(int i=0;i<N;i++){ pinMode(cePins[i], OUTPUT); digitalWrite(cePins[i], LOW); }
   delay(10);
@@ -37,3 +42,4 @@ void loop(){
   }
   
 }
+
