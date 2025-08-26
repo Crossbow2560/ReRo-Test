@@ -1,0 +1,56 @@
+// ============= VL6180X TOF ============= //
+
+SDA -> ESP32 SDA(21)
+SCL -> ESP32 SCL(9)
+5V -> ESP32 5V
+GND -> ESP32 GND
+CE -> ESP32 GPIO(2, 3, 6, 7, 10)	// for each of the sensors
+
+
+// ============= BMX 160 IMU ============= //
+
+SDA -> ESP32 SDA(21)
+SCL -> ESP32 SCL(9)
+5V -> ESP32 5V
+GND -> ESP32 GND
+
+// ============= Motor A ============= //
+
+enA -> ESP32 (4)
+enB -> ESP32 (5)
+
+// ============= Motor B ============= //
+
+enA -> ESP32 (8)
+enB -> ESP32 (11)
+
+// ============= IR Array ============= //
+
+IR CH0 -> ESP32 (12)
+IR CH1 -> ESP32 (13)
+IR CH2 -> ESP32 (14)
+IR CH3 -> ESP32 (15)
+IR CH4 -> ESP32 (16)
+IR CH5 -> ESP32 (17)
+IR CH6 -> ESP32 (18)
+IR CH7 -> ESP32 (19)
+5V -> ESP32 5V
+GND -> ESP32 GND
+
+// ============= MDD3A Motor Driver ============= //
+
+M1A -> ESP32 (33)
+M1B -> ESP32 (35)
+
+M2A -> ESP32 (36)
+M2B -> ESP32 (37)
+
+5V -> ESP32 5V
+GND -> ESP32 GND
+
+// ============= AS7341 Color Sensor ============= //
+
+SDA -> RPi (3)
+SCL -> RPi (5)
+5V -> RPi 5V
+GND -> RPi GND
