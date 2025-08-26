@@ -11,7 +11,10 @@ uint8_t addrs[N] = {0x30,0x31};
 
 TwoWire myWire = TwoWire(0);
 
-DFRobot_VL6180X tof[N]; 
+DFRobot_VL6180X tof[N]={
+  DFRobot_VL6180X(addrs[0], &myWire),
+  DFRobot_VL6180X(addrs[1], &myWire)
+}
 
 void init_TOF(int i){
   digitalWrite(cePins[i], HIGH);
@@ -42,5 +45,6 @@ void loop(){
   }
   
 }
+
 
 
