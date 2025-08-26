@@ -1,6 +1,6 @@
 // ============= VL6180X TOF ============= //
 
-SDA -> ESP32 SDA(21)
+SDA -> ESP32 SDA(8)
 SCL -> ESP32 SCL(9)
 5V -> ESP32 5V
 GND -> ESP32 GND
@@ -9,7 +9,7 @@ CE -> ESP32 GPIO(2, 3, 6, 7, 10)	// for each of the sensors
 
 // ============= BMX 160 IMU ============= //
 
-SDA -> ESP32 SDA(21)
+SDA -> ESP32 SDA(8)
 SCL -> ESP32 SCL(9)
 5V -> ESP32 5V
 GND -> ESP32 GND
@@ -21,7 +21,7 @@ enB -> ESP32 (5)
 
 // ============= Motor B ============= //
 
-enA -> ESP32 (8)
+enA -> ESP32 (21)
 enB -> ESP32 (11)
 
 // ============= IR Array ============= //
@@ -53,4 +53,5 @@ GND -> ESP32 GND
 SDA -> RPi (3)
 SCL -> RPi (5)
 5V -> RPi 5V
+
 GND -> RPi GND
