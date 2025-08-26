@@ -3,7 +3,7 @@
 #include <DFRobot_VL6180X.h>
 
 #define mySDA 21
-#define mySCL 9;
+#define mySCL 9
 
 #define N 2
 int cePins[N] = {2,3};
@@ -42,4 +42,5 @@ void loop(){
   }
   
 }
+
 
