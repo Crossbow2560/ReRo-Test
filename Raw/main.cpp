@@ -9,7 +9,7 @@
 int cePins[N] = {2,3};
 uint8_t addrs[N] = {0x30,0x31};
 
-TwoWire myWire = TwoWire(0);
+TwoWire myWire(0);
 
 DFRobot_VL6180X tof[N]={
   DFRobot_VL6180X(addrs[0], &myWire),
@@ -45,6 +45,7 @@ void loop(){
   }
   
 }
+
 
 
 
