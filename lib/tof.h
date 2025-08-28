@@ -4,9 +4,9 @@
 #include <Wire.h>
 #include <DFRobot_VL6180X.h>
 
-class ReRoTOF {
+class TOF {
 public:
-    ReRoTOF(const int* cePins, const uint8_t* addrs, size_t count);
+    TOF(const int* cePins, const uint8_t* addrs, size_t count);
     void begin();
     uint8_t readDistance(uint8_t idx);
 
