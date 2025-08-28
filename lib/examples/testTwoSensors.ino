@@ -1,8 +1,8 @@
 #include "TOF.h"
 
-#define N_SENSORS 2
-int cePins[N_SENSORS] = {2, 3};           // Chip enable pins for your sensors
-uint8_t addrs[N_SENSORS] = {0x30, 0x31};  // I2C addresses for your sensors
+#define N_SENSORS 5
+int cePins[N_SENSORS] = {2, 3, 6, 7, 10};           // Chip enable pins for your sensors
+uint8_t addrs[N_SENSORS] = {0x30, 0x31, 0x32, 0x33, 0x34};  // I2C addresses for your sensors
 
 TOF sensors(cePins, addrs, N_SENSORS);
 
