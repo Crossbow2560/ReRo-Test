@@ -11,9 +11,8 @@ class BMX{
   public:
     BMX();
     void init();
-    sBmx160SensorData* getGyroData();
-    sBmx160SensorData* getAccelData();
-
-}
+    sBmx160SensorData_t* getGyroData();
+    sBmx160SensorData_t* getAccelData();
+};
 
 #endif
