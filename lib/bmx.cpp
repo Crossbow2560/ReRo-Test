@@ -1,7 +1,6 @@
 #include "bmx.h"
 
-void BMX :: BMX(){
-  return 0;
+BMX :: BMX(){
 }
 
 void BMX :: init(){
