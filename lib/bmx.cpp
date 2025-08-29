@@ -1,17 +1,18 @@
 #include "bmx.h"
 
-BMX :: BMX(){
+BMX::BMX() {
 }
 
-void BMX :: init(){
+void BMX::init() {
   sensor.begin();
 }
 
-sBmx160SensorData* BMX :: getGyroData(){
-  return sensor.getAllData(NULL, &Ogyro, NULL);
+sBmx160SensorData_t* BMX::getGyroData() {
+  sensor.getAllData(NULL, &Ogyro, NULL);
+  return &Ogyro;
 }
 
-sBmx160SensorData* BMX :: getAccelData(){
-  return sensor.getAllData(NULL, NULL, &OAccel);
+sBmx160SensorData_t* BMX::getAccelData() {
+  sensor.getAllData(NULL, NULL, &Oaccel);
+  return &Oaccel;
 }
-
