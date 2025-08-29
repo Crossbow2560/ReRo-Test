@@ -11,3 +11,6 @@ class IR{
         int getValue(int index);
         
 };
+
+
+#endif
