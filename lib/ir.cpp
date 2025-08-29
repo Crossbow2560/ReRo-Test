@@ -1,7 +1,8 @@
 #include "ir.h"
 
-IR :: IR(int s, int* pinArray){
+IR :: IR(int s, int* pins){
   size = s;
+  pinArray = pins;
   for(int i = 0; i < size; i++){
     pinMode(pinArray[i], INPUT);
   }
