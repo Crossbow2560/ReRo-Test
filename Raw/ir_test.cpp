@@ -12,7 +12,7 @@ void setup() {
 
 void loop() {
   for(int i = 0; i < N; i++){
-    valArr[N] = digitalRead(pinArr[N]);
+    valArr[i] = digitalRead(pinArr[i]);
   }
   for(int i = 0; i < N; i++){
     Serial.print(valArr[i]);
