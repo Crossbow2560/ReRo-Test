@@ -7,7 +7,7 @@ IR :: IR(int s, int* pinArray){
   }
 }
 
-int getAll(){
+int* IR :: getAll(){
   int* valArray[size];
   for(int i = 0; i < N; i++){
     valArray[i] = digitalRead(pinArray[i]);
