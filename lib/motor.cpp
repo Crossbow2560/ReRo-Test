@@ -37,4 +37,5 @@ int motor::getMotorSpeed(){
 }
 
 motor right(33, 35, 4, 5);
-motor left(36, 37, 8, 11);
+
+motor left(36, 37, 21, 11);
