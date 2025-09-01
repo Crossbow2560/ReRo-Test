@@ -1,2 +1,2 @@
-# Maze solver Exceeds maze limits
-# 
+- Maze solver exceeds map limits
+- Maze solver about to collide with walls
