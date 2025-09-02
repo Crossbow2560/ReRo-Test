@@ -38,9 +38,9 @@ uint8_t TOF::readDistance(uint8_t idx) {
     return 0;
 }
 
-uint8_t* TOF::readAllValues(){
+uint8_t TOF::readAllValues(){
     for(int i = 0; i < _count; i++){
         values[i] = _tof[idx].rangePollMeasurement();
     }
-    return &values;
+    return values;
 }
