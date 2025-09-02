@@ -1,24 +1,43 @@
-#include<arduino.h>
-#include "BMX160.h"
+#include <Arduino.h>
+#include <Wire.h>
+#include <BMX160.h>
+#include <VL6180X.h>
+
+const int cePins[] = {2, 3, 6, 7, 10}; // Chip enable pins for TOF sensors
+const uint8_t addrs[] = {0x30, 0x31, 0x32, 0x33, 0x34}; // I2C addresses for TOF sensors
+const size_t sensorCount = 5;
 
 BMX imu;
+TOF tof(cePins, addrs, sensorCount);
 
-void setup(){
-    imu.init();
-    Serial.begin(115200);
+void setup() {
+	Serial.begin(9600);
+	Wire.begin();
+	imu.init();
+	Serial.println("BMX160 initialized.");
+	tof.begin();
+	Serial.println("VL6180X TOF initialized.");
 }
-void loop(){
-    uint8_t accel_x,accel_y,accel_z;
-    uint8_t gyro_x,gyro_y,gyro_z;
-    accel_x = imu.getAccelData()->x;
-    accel_y = imu.getAccelData()->y;
-    accel_z = imu.getAccelData()->z;
-    gyro_x = imu.getGyroData()->x;
-    gyro_y = imu.getGyroData()->y;
-    gyro_z = imu.getGyroData()->z;
-    printf("---------------------------------\n");
-    Serial.printf("Accelerometer readings : %d,%d,%d\n",accel_x,accel_y,accel_z);
-    Serial.printf("Gyroscope readings : %d,%d,%d\n",gyro_x,gyro_y,gyro_z);
-    printf("---------------------------------\n");
-    delay(500);
+
+void loop() {
+	// BMX160 test
+	sBmx160SensorData_t* gyro = imu.getGyroData();
+	sBmx160SensorData_t* accel = imu.getAccelData();
+	Serial.print("Gyro: ");
+	Serial.print(gyro->x); Serial.print(", ");
+	Serial.print(gyro->y); Serial.print(", ");
+	Serial.println(gyro->z);
+	Serial.print("Accel: ");
+	Serial.print(accel->x); Serial.print(", ");
+	Serial.print(accel->y); Serial.print(", ");
+	Serial.println(accel->z);
+
+	// VL6180X test
+	for (size_t i = 0; i < sensorCount; ++i) {
+		uint8_t distance = tof.readDistance(i);
+		Serial.print("TOF "); Serial.print(i); Serial.print(" distance: ");
+		Serial.print(distance); Serial.println(" mm");
+	}
+
+	delay(1000);
 }
