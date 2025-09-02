@@ -31,8 +31,8 @@ IR CH1 -> ESP32 (13)
 IR CH2 -> ESP32 (14)
 IR CH3 -> ESP32 (15)
 IR CH4 -> ESP32 (16)
-IR CH5 -> ESP32 (17)
-IR CH6 -> ESP32 (18)
+IR CH5 -> ESP32 (41)
+IR CH6 -> ESP32 (40)
 IR CH7 -> ESP32 (19)
 5V -> ESP32 5V
 GND -> ESP32 GND
@@ -56,3 +56,6 @@ SCL -> ESP32 (9)
 
 GND -> RPi GND
 
+// ============= RPi to ESP32 ============= //
+
+StopPin (RPi) -> ESP32 (39)
