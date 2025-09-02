@@ -1,7 +1,6 @@
 #ifndef SENSORS_H
 #define SENSORS_H
 
-
 #include <Wire.h>
 #include <Arduino.h>
 #include <DFRobot_VL6180X.h>
