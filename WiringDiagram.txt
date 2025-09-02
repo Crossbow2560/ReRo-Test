@@ -50,8 +50,9 @@ GND -> ESP32 GND
 
 // ============= AS7341 Color Sensor ============= //
 
-SDA -> RPi (3)
-SCL -> RPi (5)
-5V -> RPi 5V
+SDA -> ESP32 (8)
+SCL -> ESP32 (9)
+5V -> ESP32 5V
 
 GND -> RPi GND
+
