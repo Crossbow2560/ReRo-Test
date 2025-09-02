@@ -18,7 +18,6 @@ void TOF::init_TOF(uint8_t i) {
 }
 
 void TOF::begin() {
-    Wire.begin(); // remove if putting global access
     for (size_t i = 0; i < _count; ++i) {
         pinMode(_cePins[i], OUTPUT);
         digitalWrite(_cePins[i], LOW);
