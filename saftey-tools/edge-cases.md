@@ -4,5 +4,3 @@
 - IMU Shows no movement of bot even when motors are running
 - Battery power is low
 - Execution of code exceeds time slot
-- Bot goes in reverse for too long (temporary issue)
-- 
