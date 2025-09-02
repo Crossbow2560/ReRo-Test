@@ -1,6 +1,7 @@
 #include "motor.h"
 
 int threshold = 255;
+int reverse_threshold = 255;
 
 motor::motor(int A, int B, int eA, int eB)
   :pinA(A), pinB(B), enA(eA), enB(eB){
@@ -13,7 +14,12 @@ motor::motor(int A, int B, int eA, int eB)
 
 int motor::setMotorSpeed(int direction, int speed){
   // clamp to max or min values if exceeded
-  if(speed > threshold){speed = threshold;}
+  if(direction > 0){
+    if(speed > threshold){speed = threshold;}
+  }
+  else if(direction < 0){
+    if(speed > reverse_threshold){speed = reverse_threshold;}
+  }
   else if(speed < 0){speed = 0;}
 
   if(direction > 0){
