@@ -65,6 +65,13 @@ UART RX (RPi) -> ESP32 (17)
 
 ADC (SPI MOSI) -> RPi (19)
 ADC (SPI MISO) -> RPi (21)
-ADC (SPI CLK) -> RPi (11)
-ADC (SPI CE) -> RPi (8)
+ADC (SPI CLK) -> RPi (23)
+ADC (SPI CE) -> RPi (24)
+
+// ============= Switches ============= //
+
+12V Supply Control -> RPi (11)
+Motor Power Control -> RPi (13)
+Charge Control -> RPi (15)
+
 
