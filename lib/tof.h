@@ -9,6 +9,7 @@ public:
     TOF(const int* cePins, const uint8_t* addrs, size_t count);
     void begin();
     uint8_t readDistance(uint8_t idx);
+    uint8_t* readAllValues();
 
 private:
     int* _cePins;
