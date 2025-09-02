@@ -53,7 +53,6 @@ GND -> ESP32 GND
 SDA -> ESP32 (8)
 SCL -> ESP32 (9)
 5V -> ESP32 5V
-
 GND -> RPi GND
 
 // ============= RPi to ESP32 ============= //
