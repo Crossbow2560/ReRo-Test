@@ -26,7 +26,7 @@ void TOF::begin() {
     for (size_t i = 0; i < _count; ++i) init_TOF(i);
 }
 
-uint8_t TOF::readAllValues(){
+uint8_t* TOF::readAllValues(){
     for(int i = 0; i < _count; i++){
         values[i] = _tof[i].rangePollMeasurement();
     }
