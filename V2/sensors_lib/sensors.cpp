@@ -2,16 +2,11 @@
 
 // =================== VL6180X Sensor Functions =================== // 
 
-TOF::TOF(){
-    _tof = new DFRobot_VL6180X[_count];
-    begin();
-}
-
 void TOF::init_TOF(uint8_t i) {
     digitalWrite(_cePins[i], HIGH);
     delay(10);
     while (!_tof[i].begin()) {
-        Serial.printf("Error Initializing TOF %d \n", i);
+        Serial.println("Error Initializing TOF %d \n", i);
     }
     _tof[i].setIICAddr(_addrs[i]);
     delay(50);
@@ -26,6 +21,11 @@ void TOF::begin() {
     for (size_t i = 0; i < _count; ++i) init_TOF(i);
 }
 
+TOF::TOF(){
+    _tof = new DFRobot_VL6180X[_count];
+    begin();
+}
+
 uint8_t* TOF::readAllValues(){
     for(int i = 0; i < _count; i++){
         values[i] = _tof[i].rangePollMeasurement();
@@ -37,14 +37,12 @@ uint8_t* TOF::readAllValues(){
 
 // =================== BMX160 Class Functions =================== // 
 
-void BMX::init();
+void BMX::init() {
+  sensor.begin();
+}
 
 BMX::BMX() {
     sensor.init();
-}
-
-void BMX::init() {
-  sensor.begin();
 }
 
 sBmx160SensorData_t* BMX::getGyroData() {

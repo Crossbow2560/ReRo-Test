@@ -38,8 +38,8 @@ class IR{
         int* getAllData();
     private:
         static const int _count = 8;
-        int _values[] = {0, 0, 0, 0, 0, 0, 0, 0};
-        int _pinArray[] = {12, 13, 14, 15, 16, 41, 40, 19};
+        int _values[_count] = {0, 0, 0, 0, 0, 0, 0, 0};
+        int _pinArray[_count] = {12, 13, 14, 15, 16, 41, 40, 19};
 };
 
 #endif
