@@ -32,4 +32,14 @@ class BMX{
         sBmx160SensorData_t Ogyro, Oaccel;
 };
 
+class IR{
+    public:
+        IR();
+        int* getAllData();
+    private:
+        int _count = 8;
+        int* _values = {0, 0, 0, 0, 0, 0, 0, 0};
+        int _pinArray = {12, 13, 14, 15, 16, 41, 40, 19};
+};
+
 #endif

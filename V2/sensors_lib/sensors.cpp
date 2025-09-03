@@ -54,3 +54,22 @@ sBmx160SensorData_t* BMX::getAccelData() {
   sensor.getAllData(NULL, NULL, &Oaccel);
   return &Oaccel;
 }
+
+// =================== BMX160 Class Functions =================== //
+
+// =================== IR Array Class Functions =================== //
+
+IR::IR(){
+    for(int i = 0; i < _count; i++){
+        pinMode(_pinArray[i], INPUT);
+    }
+}
+
+int* IR::getAllData(){
+    for(int i = 0; i < _count; i++){
+        _values[i] = digitalRead(_pinArray[i]);
+    }
+    return _values;
+}
+
+// =================== IR Array Class Functions =================== //
