@@ -9,11 +9,11 @@
 class TOF{
     public:
         TOF();
-        uint8_t* readAllValues();
+        uint8_t readAllValues();
         // ~TOF();
     private:
-        uint8_t _addrs[] = { 0x30, 0x31, 0x32, 0x33, 0x34 };
         static const int _count = 5;
+        uint8_t _addrs[_count] = { 0x30, 0x31, 0x32, 0x33, 0x34 };
         DFRobot_VL6180X* _tof;
         void begin();   // initial sensor array
         void init_TOF(uint8_t i); // initialize single sensor
@@ -38,8 +38,8 @@ class IR{
         int* getAllData();
     private:
         static const int _count = 8;
-        int _values[] = {0, 0, 0, 0, 0, 0, 0, 0};
-        int _pinArray[] = {12, 13, 14, 15, 16, 41, 40, 19};
+        int _values[_count] = {0, 0, 0, 0, 0, 0, 0, 0};
+        int _pinArray[_count] = {12, 13, 14, 15, 16, 41, 40, 19};
 };
 
 #endif
