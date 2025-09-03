@@ -12,13 +12,13 @@ class TOF{
         uint8_t readAllValues();
         // ~TOF();
     private:
-        int* _cePins = {2, 3, 6, 7, 10};
         uint8_t* _addrs = { 0x30, 0x31, 0x32, 0x33, 0x34 };
         size_t _count = 5;
         DFRobot_VL6180X* _tof;
         void begin();   // initial sensor array
         void init_TOF(uint8_t i); // initialize single sensor
-        uint8_t values[] = {0, 0, 0, 0, 0};      
+        uint8_t values[] = {0, 0, 0, 0, 0};
+        int _cePins[_count] = {2, 3, 6, 7, 10};      
 };
 
 class BMX{
@@ -38,8 +38,8 @@ class IR{
         int* getAllData();
     private:
         int _count = 8;
-        int* _values = {0, 0, 0, 0, 0, 0, 0, 0};
-        int _pinArray = {12, 13, 14, 15, 16, 41, 40, 19};
+        int _values[] = {0, 0, 0, 0, 0, 0, 0, 0};
+        int _pinArray[] = {12, 13, 14, 15, 16, 41, 40, 19};
 };
 
 #endif

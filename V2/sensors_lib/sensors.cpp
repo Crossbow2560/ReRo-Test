@@ -28,7 +28,7 @@ void TOF::begin() {
 
 uint8_t TOF::readAllValues(){
     for(int i = 0; i < _count; i++){
-        values[i] = _tof[idx].rangePollMeasurement();
+        values[i] = _tof[i].rangePollMeasurement();
     }
     return values;
 }
@@ -36,6 +36,8 @@ uint8_t TOF::readAllValues(){
 // =================== VL6180X Sensor Functions =================== // 
 
 // =================== BMX160 Class Functions =================== // 
+
+void BMX::init();
 
 BMX::BMX() {
     sensor.init();
