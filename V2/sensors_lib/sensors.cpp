@@ -6,7 +6,9 @@ void TOF::init_TOF(uint8_t i) {
     digitalWrite(_cePins[i], HIGH);
     delay(10);
     while (!_tof[i].begin()) {
-        Serial.println("Error Initializing TOF %d \n", i);
+        Serial.print("Error Initializing TOF ");
+        Serial.print(i);
+        Serial.println();
     }
     _tof[i].setIICAddr(_addrs[i]);
     delay(50);
