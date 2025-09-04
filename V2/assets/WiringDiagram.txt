@@ -74,4 +74,10 @@ ADC (SPI CE) -> RPi (24)
 Motor Power Control -> RPi (13)
 Charge Control -> RPi (15)
 
+// ============= Free Pins on ESP32 ============= //
+
+ESP32 (34)
+ESP32 (42)
+ESP32 (43)
+ESP32 (44)
 
