@@ -74,20 +74,24 @@ ADC (SPI CE) -> RPi (24)
 Motor Power Control -> RPi (13)
 Charge Control -> RPi (15)
 
-// ============= UNUSED ESP32 GPIO PINS ============= //
-
-// These pins are currently available for use:
-// GPIO0
+// ============= UNUSED, GENERAL PURPOSE ESP32 GPIO PINS ============= //
+//
+// These pins are currently available for general input/output use:
+//
 // GPIO1
-// GPIO20
 // GPIO34
 // GPIO38
 // GPIO42
-// GPIO43
-// GPIO44
-// GPIO45
-// GPIO46
 // GPIO47
 // GPIO48
+
+// ============= SPECIAL PURPOSE ESP32 PINS (Unused) ============= //
+//
+// These pins are available but are typically reserved for special functions:
+//
+// GPIO0    // BOOT strapping pin
+// GPIO20   // Typically used for USB/UART
+// GPIO43   // Used for serial Communication
+// GPIO44   // Used for serial Communication
 
 
