@@ -33,3 +33,5 @@ private:
     int _isInitialized = 0;
     sBmx160SensorData_t Ogyro, Oaccel;
 };
+
+#endif
