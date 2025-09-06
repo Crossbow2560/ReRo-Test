@@ -74,4 +74,20 @@ ADC (SPI CE) -> RPi (24)
 Motor Power Control -> RPi (13)
 Charge Control -> RPi (15)
 
+// ============= UNUSED ESP32 GPIO PINS ============= //
+
+// These pins are currently available for use:
+// GPIO0
+// GPIO1
+// GPIO20
+// GPIO34
+// GPIO38
+// GPIO42
+// GPIO43
+// GPIO44
+// GPIO45
+// GPIO46
+// GPIO47
+// GPIO48
+
 
