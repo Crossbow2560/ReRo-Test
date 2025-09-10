@@ -62,8 +62,8 @@ GND -> RPi GND
 // ============= RPi to ESP32 ============= //
 
 StopPin (RPi) -> ESP32 (39)
-UART TX (RPi) -> ESP32 (18)
-UART RX (RPi) -> ESP32 (17)
+UART TX (RPi) (14) -> ESP32 (18)
+UART RX (RPi) (15) -> ESP32 (17)
 
 // ============= ADC ============= //
 
