@@ -19,6 +19,7 @@ void taskAdmin(void* pvParameters) {
     for (;;) {
         SensorManager::updateTOF_();
         SensorManager::updateBMX_();
+        SensorManager::updateIR_();
         waitMS(50);
     }
 }

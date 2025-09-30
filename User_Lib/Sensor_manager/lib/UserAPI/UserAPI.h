@@ -37,3 +37,17 @@ inline void readMagneto(float* out) {
     out[1] = imu.magneto[1];
     out[2] = imu.magneto[2];
 }
+
+// --- IR wrappers ---
+inline void readIRArray(int* valuesOut) {
+    SensorManager::IRData snapshot = SensorManager::readIR_(); // binary 0/1
+    for (size_t i = 0; i < SensorManager::IR_COUNT; i++)
+        valuesOut[i] = snapshot.values[i];
+}
+
+inline void readIRRawArray(int* valuesOut) {
+    SensorManager::IRData snapshot = SensorManager::readIRRaw_();
+    for (size_t i = 0; i < SensorManager::IR_COUNT; i++)
+        valuesOut[i] = snapshot.values[i]; // raw RC readings
+}
+
