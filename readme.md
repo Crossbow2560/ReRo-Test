@@ -6,7 +6,6 @@
 - **User_Lib**: Final structure of main code and user libraries
 
 ## Leftover Tasks
-- IR channel library implementation
 - Colour sensor integration and implementation
 - Test separate UART's for admin and user tasks
 - Motor movement functions
