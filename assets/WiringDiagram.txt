@@ -2,8 +2,8 @@
 
 SDA1 -> ESP32 SDA(34)
 SCL1 -> ESP32 SCL(38)
-SDA2 -> ESP32 SDA(47)
-SCL2 -> ESP32 SCL(48)
+SDA2 -> ESP32 SDA(8)
+SCL2 -> ESP32 SCL(9)
 5V -> ESP32 5V
 GND -> ESP32 GND
 CE -> ESP32 GPIO(2, 3, 6, 7, 10)	// for each of the sensors
@@ -11,8 +11,8 @@ CE -> ESP32 GPIO(2, 3, 6, 7, 10)	// for each of the sensors
 
 // ============= BMX 160 IMU ============= //
 
-SDA -> ESP32 SDA(47)
-SCL -> ESP32 SCL(48)
+SDA -> ESP32 SDA(8)
+SCL -> ESP32 SCL(9)
 5V -> ESP32 5V
 GND -> ESP32 GND
 
@@ -83,8 +83,8 @@ Charge Control -> RPi (15)
 // These pins are currently available for general input/output use:
 //
 // GPIO1
-// GPIO8
-// GPIO9
+// GPIO47
+// GPIO48
 // GPIO42
 
 // ============= SPECIAL PURPOSE ESP32 PINS (Unused) ============= //
