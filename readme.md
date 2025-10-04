@@ -7,7 +7,5 @@
 
 ## Leftover Tasks
 - Colour sensor integration and implementation
-- Test separate UART's for admin and user tasks
-- Check Admin Serial and User Serial pins and port connections
 - Motor movement functions
 - Security Implementation
