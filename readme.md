@@ -3,7 +3,7 @@
 ## Versions
 - **old, V2, V3**: Dummy versions 
 - **V4**: Test code with devices split across 2 I2C buses
-- **User_Lib**: Final structure of main code and user libraries
+- **V5**: Final structure of main code and user libraries
 
 ## Leftover Tasks
 - Colour sensor integration and implementation
