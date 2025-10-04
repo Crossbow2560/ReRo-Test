@@ -36,6 +36,7 @@ IR CH4 -> ESP32 (16)
 IR CH5 -> ESP32 (41)
 IR CH6 -> ESP32 (40)
 IR CH7 -> ESP32 (19)
+IR Emitter Pin -> ESP32(42)
 5V -> ESP32 5V
 GND -> ESP32 GND
 
@@ -85,7 +86,7 @@ Charge Control -> RPi (15)
 // GPIO1
 // GPIO47
 // GPIO48
-// GPIO42
+
 
 // ============= SPECIAL PURPOSE ESP32 PINS (Unused) ============= //
 //
