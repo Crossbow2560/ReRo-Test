@@ -55,16 +55,16 @@ GND -> ESP32 GND
 
 SDA1 -> ESP32 SDA(34)
 SCL1 -> ESP32 SCL(38)
-SDA2 -> ESP32 SDA(47)
-SCL2 -> ESP32 SCL(48)
+SDA2 -> ESP32 SDA(8)
+SCL2 -> ESP32 SCL(9)
 5V -> ESP32 5V
 GND -> RPi GND
 
 // ============= RPi to ESP32 ============= //
 
 StopPin (RPi) -> ESP32 (39) // someone please update this, I don't know the stop pin
-UART TX (RPi) (14) -> ESP32 (18)
-UART RX (RPi) (15) -> ESP32 (17)
+UART TX (RPi) (GPIO 14) -> ESP32 (18 RX)
+UART RX (RPi) (GPIOP 15) -> ESP32 (17 TX)
 
 // ============= ADC ============= //
 
